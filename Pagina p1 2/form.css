@@ -1,0 +1,95 @@
+/* Reseta margens e preenchimentos padrão */
+* {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(img/OPSEG70.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 200px; /* Espaço entre a imagem e o texto */
+}
+
+.header-image {
+    width:1300px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 80px; /* Bordas arredondadas para a imagem */
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2); /* Sombra sutil para a imagem */
+}
+
+.text-box {
+    max-width: 11100px; /* Limita a largura do texto */
+}
+
+.text-box h1 {
+    font-size: 8rem;
+    color: #080808;
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 5rem;
+    color: #000000;
+}
+
+form.formulario {
+    width: 600%;
+    max-width: 600px;
+    background: #b39393;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form.formulario label {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #080303;
+}
+
+form.formulario input[type="text"],
+form.formulario input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form.formulario button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form.formulario button:hover {
+    background-color: #0056b3;
+}
+
+.retorno{
+    font-size: 5rem;
+    color: #000000;
+}

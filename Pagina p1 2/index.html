@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1> Com nossa plataforma, você encontra tudo o que precisa perto de casa, com preços especiais e a praticidade das compras coletivas, valorizando o comércio local ! <br>
+            Escolha o produto desejado e conheça um pouco sobre o Pet-shop do seu bairro. </h1>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="img/foto1.jfif" alt="Imagem 1" onclick="redirect('form.html')">
+                <img src="img/fotoo2.jfif" alt="Imagem 2" onclick="redirect('form.html')">
+                <img src="img/foto3.jfif" alt="Imagem 3" onclick="redirect('form.html')">
+                <img src="img/foto4.jfif" alt="Imagem 4" onclick="redirect('form.html')">
+                <img src="img/foto5.jfif" alt="Imagem 5" onclick="redirect('form.html')">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </main>
+
+    <script>
+        let slideIndex = 1;
+
+        function showSlides() {
+            let slides = document.querySelectorAll('.carousel-images img');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+        }
+
+        function moveSlide(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+
+        function redirect(page) {
+            window.location.href = page;
+        }
+
+        setInterval(showSlides, 5000); // Muda de slide a cada 5 segundos
+    </script>
+</body>
+</html>
